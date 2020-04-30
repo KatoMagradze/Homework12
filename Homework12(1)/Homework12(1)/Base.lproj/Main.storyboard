@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4bT-Ys-5ol">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Books-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="books_vc" id="BYZ-38-t0r" customClass="ViewController" customModule="Homework12_1_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UrA-1t-bzV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell-identifier" id="FLM-mc-9Pc" customClass="CustomTableViewCell" customModule="Homework12_1_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FLM-mc-9Pc" id="vjL-Xy-NIL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="წიგნის სახელი" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaY-hX-vct">
+                                                    <rect key="frame" x="20" y="36" width="127" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="წიგნის ავტორი" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XU-Zo-gM2">
+                                                    <rect key="frame" x="20" y="82.5" width="127" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="f5H-VY-3Xt">
+                                                    <rect key="frame" x="253" y="11" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.86068904449999994" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="BaY-hX-vct" firstAttribute="top" secondItem="vjL-Xy-NIL" secondAttribute="topMargin" constant="25" id="Eci-00-Dkp"/>
+                                                <constraint firstItem="BaY-hX-vct" firstAttribute="leading" secondItem="4XU-Zo-gM2" secondAttribute="leading" id="Gsp-UT-2Rs"/>
+                                                <constraint firstItem="BaY-hX-vct" firstAttribute="leading" secondItem="vjL-Xy-NIL" secondAttribute="leadingMargin" id="HcS-M9-INm"/>
+                                                <constraint firstItem="4XU-Zo-gM2" firstAttribute="top" secondItem="BaY-hX-vct" secondAttribute="bottom" constant="26" id="SA7-OW-z7n"/>
+                                                <constraint firstItem="4XU-Zo-gM2" firstAttribute="leading" secondItem="vjL-Xy-NIL" secondAttribute="leadingMargin" id="p9s-9V-YkL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="4XU-Zo-gM2" id="oYA-bO-EWp"/>
+                                            <outlet property="bookImageView" destination="f5H-VY-3Xt" id="OuB-xn-pgo"/>
+                                            <outlet property="nameLabel" destination="BaY-hX-vct" id="hvC-Qq-xiX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uML-j3-CzW">
+                                <rect key="frame" x="0.0" y="729" width="414" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5411744771" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="დამატება">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LuI-wx-gdr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UrA-1t-bzV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZRQ-QH-xxk"/>
+                            <constraint firstItem="UrA-1t-bzV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bOY-j1-1Hl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UrA-1t-bzV" secondAttribute="bottom" constant="80" id="fMh-9d-V8l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UrA-1t-bzV" secondAttribute="trailing" id="txQ-Kg-6Sp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Books" id="Gdc-qw-3YK"/>
+                    <connections>
+                        <outlet property="tableView" destination="UrA-1t-bzV" id="sET-Pv-rB9"/>
+                        <segue destination="Z32-lS-EzB" kind="show" identifier="addbooks_vc" id="WMB-ck-UE2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="138"/>
+        </scene>
+        <!--New Book View Controller-->
+        <scene sceneID="Y9T-6J-xU2">
+            <objects>
+                <viewController storyboardIdentifier="addbook_vc" id="Z32-lS-EzB" customClass="NewBookViewController" customModule="Homework12_1_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pI9-Ms-d3F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="წიგნის სახელი" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="92e-MP-Txk">
+                                <rect key="frame" x="20" y="235" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="წიგნის ავტორი" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9B-lr-SdI">
+                                <rect key="frame" x="20" y="324" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1P-Ey-8m1">
+                                <rect key="frame" x="53" y="507" width="308" height="50"/>
+                                <color key="backgroundColor" red="0.5411744771" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="64g-vr-bYN"/>
+                                </constraints>
+                                <state key="normal" title="წიგნის დამატება">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAddBookTapped:" destination="Z32-lS-EzB" eventType="touchUpInside" id="pbI-Cm-kwQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z1P-Ey-8m1" firstAttribute="top" secondItem="J9B-lr-SdI" secondAttribute="bottom" constant="149" id="0SK-DA-pNM"/>
+                            <constraint firstItem="MnS-gi-vYd" firstAttribute="trailing" secondItem="z1P-Ey-8m1" secondAttribute="trailing" constant="53" id="10k-uC-lJs"/>
+                            <constraint firstItem="92e-MP-Txk" firstAttribute="trailing" secondItem="J9B-lr-SdI" secondAttribute="trailing" id="1a7-QV-2R1"/>
+                            <constraint firstItem="J9B-lr-SdI" firstAttribute="width" secondItem="z1P-Ey-8m1" secondAttribute="width" multiplier="1.21429" id="7fG-1e-Mil"/>
+                            <constraint firstItem="92e-MP-Txk" firstAttribute="leading" secondItem="MnS-gi-vYd" secondAttribute="leading" constant="20" id="ATZ-Oa-bSK"/>
+                            <constraint firstItem="J9B-lr-SdI" firstAttribute="height" secondItem="z1P-Ey-8m1" secondAttribute="height" multiplier="0.68" id="JDb-zW-8Qu"/>
+                            <constraint firstItem="MnS-gi-vYd" firstAttribute="trailing" secondItem="92e-MP-Txk" secondAttribute="trailing" constant="20" id="JQw-mi-jYS"/>
+                            <constraint firstItem="92e-MP-Txk" firstAttribute="leading" secondItem="J9B-lr-SdI" secondAttribute="leading" id="MaH-hI-NbO"/>
+                            <constraint firstItem="J9B-lr-SdI" firstAttribute="leading" secondItem="MnS-gi-vYd" secondAttribute="leading" constant="20" id="Ui9-13-aGZ"/>
+                            <constraint firstItem="92e-MP-Txk" firstAttribute="top" secondItem="MnS-gi-vYd" secondAttribute="top" constant="235" id="WcP-Hc-jhQ"/>
+                            <constraint firstItem="MnS-gi-vYd" firstAttribute="trailing" secondItem="J9B-lr-SdI" secondAttribute="trailing" constant="20" id="Wu1-lr-Z4S"/>
+                            <constraint firstItem="z1P-Ey-8m1" firstAttribute="leading" secondItem="MnS-gi-vYd" secondAttribute="leading" constant="53" id="dCL-xA-INi"/>
+                            <constraint firstItem="J9B-lr-SdI" firstAttribute="top" secondItem="92e-MP-Txk" secondAttribute="bottom" constant="55" id="sna-Sd-IzB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MnS-gi-vYd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jX2-Zm-jTd"/>
+                    <connections>
+                        <outlet property="authorTextField" destination="J9B-lr-SdI" id="Jhy-uc-gd0"/>
+                        <outlet property="nameTextField" destination="92e-MP-Txk" id="DRT-aS-nTM"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="books_vc" id="vCm-rU-zdC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWH-iz-4wB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779.7101449275365" y="142.63392857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Q3-ON-VhI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4bT-Ys-5ol" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BC0-gc-6Co">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="06k-OI-QnZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mLj-Pm-edo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vCm-rU-zdC"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="book" width="512" height="512"/>
+    </resources>
+</document>
